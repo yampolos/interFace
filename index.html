@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>INTERFACE Login</title>
+
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/drawer.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+
+	<!-- JS -->
+	<script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/drawer.js"></script>
+    <script type="text/javascript" src="js/iscroll.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-select.min.js"></script>
+
+
+
+
+</head>
+
+
+
+
+
+<body class="drawer drawer--left">
+
+
+  <!-- ======= Drawer Menu ======= -->
+
+  <header>
+
+    <button type="button" class="drawer-toggle drawer-hamburger">
+      <span class="sr-only">toggle navigation</span>
+      <span class="drawer-hamburger-icon"></span>
+    </button>
+
+    <nav class="drawer-nav">
+
+      <div class="drawer-menu">
+
+        <img class="img-responsive logoInterFace" src="img/logoReserve.png" alt="InterFace : l'application de gestion des flux de FACE" >
+
+        <div class="userlogin">Nom et prénom de l'utilisateur<br><span>Chargé(e) de mission</span></div>
+        <a href="dEmploi.html"><div class="btn-menuPrincipal btn-bg1">Demandeurs d'emploi</div></a>
+        <a href="emploi.html"><div class="btn-menuPrincipal btn-bg2">Offres d'Emploi</div></a>
+        <a href="entreprises.html"><div class="btn-menuPrincipal btn-bg5">Entreprises</div></a>
+        <a href="rdv.html"><div class="btn-menuPrincipal btn-bg3">Rendez-vous</div></a>
+        <a href="index.html"><div class="btn-menuPrincipal btn-bg4">Deconnexion</div></a>
+
+      </div>
+    </nav>
+
+  </header>
+
+
+
+  <!-- ======= Page contenu ======= -->
+
+  <main role="main">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Zone logo et file d'Ariane -->
+            <div class="entetelogin col-lg-12 col-md-12">
+                <h1 class="fAriane col-lg-offset-5 col-lg-3 col-md-offset-4 col-md-4">Connexion</h1>
+            </div>
+        </div>
+
+        <div class="rowLog">
+            <!-- Zone Login -->
+            <div class="loginBox">
+              <img class="img-responsive" src="img/logo.png">
+
+              <form>
+                <h2>Connexion</h2>
+                <div class="form-group">
+                  <label for="exampleInputEmail1"></label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email ..">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1"></label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password ..">
+                </div>
+              </form>
+
+              <a href="dEmploi.html"><div class="btn-menuPrincipal btnLogin">Connexion</div></a>
+              <a href="" class="passForgt">Mot de passe oublié ?</a>
+            </div>
+
+
+
+        </div>
+
+    </div>
+    
+  </main>
+
+
+
+
+
+
+
+
+
+<!-- initialise iscroll -->
+<script type="text/javascript">
+  var myScroll;
+  function loaded() {
+      myScroll = new IScroll('#wrapper');
+  }
+</script>
+
+<!-- initialise drawer -->
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.drawer').drawer();
+  });
+</script> 
+
+
+</body>
+
+</html>
