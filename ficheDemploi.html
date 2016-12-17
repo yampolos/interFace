@@ -2,22 +2,39 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <title>INTERFACE Fiche DE</title>
+
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>INTERFACE demandeurs d'emploi</title>
+
+
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/drawer.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-editable.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+
     <!-- JS -->
     <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/moment.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datepicker.fr.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/bootstrap-editable.min.js"></script>
     <script type="text/javascript" src="js/drawer.js"></script>
+    <script type="text/javascript" src="js/iscroll.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-select.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
-    <script type="text/javascript" src="js/iscroll.min.js"></script>
+    <script type="text/javascript">
+
+</script>
+
+
 </head>
 
 <body class="drawer drawer--left">
@@ -52,7 +69,7 @@
 <!-- les boutons -->
     <div class="col-lg-12 bg-body">
         <div class="btnleft">
-            <button type="text" class="btnleftimg"> éditer la fiche</button>
+            <button type="text" id="editDemploi" class="btnleftimg"> éditer la fiche</button>
         </div>
         <div class="btnright">
             <button type="button" class="btnrightimg"></button><span>retour à la liste</span>
@@ -62,8 +79,9 @@
 <!-- zone du demandeur d'emploi -->
 <div class="ZDE">
     <div class="profil_DE">
-        <p class="name_DE">nom et prénom du flux</p>
-        <p class="action_DE">action : flux</p>
+        <a class="edit name_DE" href="#" id="username" data-type="text" data-pk="1" data-url="" data-title="Enter username">nom du demandeur..</a>
+
+        <p class="action_DE">action : <a class="edit name_DE" href="#" id="action" data-type="select" data-pk="1" data-url="" data-title="Genre" class="selectpicker">flux</a></p>
         <p>fiche créer le <span>(date)</span></p>
         <p>dernière modification le <span>(date)</span></p>
     </div>

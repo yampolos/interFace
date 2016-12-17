@@ -43,6 +43,7 @@ body{
 
 a, a:hover{
 	text-decoration: none;
+	color: #4d4a4a;
 }
 button{
 	border:0;
@@ -61,6 +62,35 @@ button{
 	-moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.59);
 	box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.59);
 }
+
+
+/* ===== la class edit =====*/
+
+
+.editable-click, a.editable-click, a.editable-click:hover {
+    text-decoration: none;
+    border-bottom: dashed 1px #ed9767;
+}
+.name_DE {
+    text-transform: uppercase;
+    font-family: 'GOTHAM';
+}
+.editable-unsaved {
+    font-weight: normal;
+    color: #4d4a4a;
+    border-bottom: dashed 1px #4d4a4a;
+
+}
+
+.btn-primary {
+    background-color: #24888f;
+    border-color: #24888f;
+}
+.btn-primary:hover{
+    background-color: #4d4a4a;
+    border-color: #4d4a4a;
+}
+
 
 
 /* ============= Options du Drawer ============ */
