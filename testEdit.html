@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>INTERFACE demandeurs d'emploi</title>
+
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/drawer.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-editable.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+
+	<!-- JS -->
+	<script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/moment.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-editable.min.js"></script>
+	<script type="text/javascript" src="js/drawer.js"></script>
+    <script type="text/javascript" src="js/iscroll.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datepicker.fr-CH.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+
+<script type="text/javascript">
+
+</script>
+
+
+</head>
+
+
+
+
+
+<body class="drawer drawer--left">
+
+
+  <!-- ======= Drawer Menu ======= -->
+
+  <header>
+
+    <button type="button" class="drawer-toggle drawer-hamburger">
+      <span class="sr-only">toggle navigation</span>
+      <span class="drawer-hamburger-icon"></span>
+    </button>
+
+    <nav class="drawer-nav">
+
+      <div class="drawer-menu">
+
+        <img class="img-responsive logoInterFace" src="img/logoReserve.png" alt="InterFace : l'application de gestion des flux de FACE" >
+
+        <div class="userlogin">Nom et prénom de l'utilisateur<br><span>Chargé(e) de mission</span></div>
+        <a href=""><div class="btn-menuPrincipal btn-bg1">Demandeurs d'emploi</div></a>
+        <a href=""><div class="btn-menuPrincipal btn-bg2">Offres d'Emploi</div></a>
+        <a href=""><div class="btn-menuPrincipal btn-bg5">Entreprises</div></a>
+        <a href=""><div class="btn-menuPrincipal btn-bg3">Rendez-vous</div></a>
+        <a href="login.html"><div class="btn-menuPrincipal btn-bg4">Deconnexion</div></a>
+
+      </div>
+    </nav>
+
+  </header>
+
+
+
+  <!-- ======= Page contenu ======= -->
+
+  <main>
+
+    <div class="container-fluid">
+
+        <div class="row">
+
+
+            <!-- header logo / file d'Ariane -->
+
+            <div class="entete col-lg-12 col-md-12">
+                <img class="col-lg-4 col-md-4" src="img/logo.png" alt="InterFace : l'application de gestion des flux de FACE">
+                <h1 class="fAriane col-lg-offset-5 col-lg-3 col-md-offset-4 col-md-4">demandeurs d'emploi</h1>
+            </div>
+
+
+            <!-- Page créer un Flux -->
+          
+            <div class="screenCreation col-lg-offset-1 col-lg-10 col-md-offset-1 col-md-10">
+
+
+
+                <div class="titrePage col-lg-12 col-md-12">
+
+
+                    <a href="#"
+                    id="username"
+                    data-type="text"
+                    data-pk="1"
+                    data-url=""
+                    data-title="Enter username">superuser</a>
+
+                    <br><br>
+
+                    <!--data-url="/post"-->
+
+                    <a href="#"
+                    id="ddn"
+                    data-type="combodate"
+                    data-pk="1"
+                    data-url=""
+                    data-value="1984-05-15"
+                    data-title="Select date">
+                    </a>
+
+
+
+
+
+                    <br><br>
+                    <!--data-url="/post"-->
+
+                    <a href="#"
+                    id="status"
+                    data-type="select"
+                    data-pk="1"
+                    data-url=""
+                    data-title="Genre"
+                    class="selectpicker"></a>
+
+                    <!--Moyen de locomation-->
+                    <select class="selectpicker col-lg-6 col-md-6" multiple title="Moyen de locomotion.." data-width="49.5%">
+                        <option>Aucun</option>
+                        <option>Motocyclette</option>
+                        <option>Scooter</option>
+                        <option>Transports en commun</option>
+                        <option>Vélo</option>
+                        <option>Voiture</option>
+                    </select>
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                <form class="NewFlux col-lg-12 col-md-12" method="post">
+
+                <!-- Action -->              
+                <div class="col-lg-12">
+                    <select class="form-control selectpicker" title="Action.." data-width="23.3%">
+                        <option>Annonceur Sentinelle</option>
+                        <option>Flux</option>
+                        <option>IRVIN</option>
+                        <option>Numérique</option>
+                        <option>Securité</option>
+                    </select>
+                </div> 
+                
+
+
+                    <!-- Titre Etat Civil-->
+                    <h3 class="titreForm">Etat Civil</h3>
+
+                    <!--nom-->
+                    <div class="form-group col-lg-6 col-md-6">
+                        <label for="nom"></label>
+                        <input type="text" class="form-control" id="nom" placeholder="Nom ..">
+                    </div>
+
+                    <!--prénom-->
+                    <div class="form-group col-lg-6 col-md-6">
+                        <label for="prenom"></label>
+                        <input type="text" class="form-control" id="prenom" placeholder="Prénom ..">
+                    </div>
+
+                    <!--genre-->
+                    <div class="form-group col-lg-6 col-md-6">
+                        <select class="form-control selectpicker" title="Genre">
+                            <option>Autre</option>
+                            <option>Femme</option>
+                            <option>Homme</option>
+                        </select>
+                    </div> 
+
+                    <!--Tranche d'age-->
+                    <div class="form-group col-lg-6 col-md-6">
+                        <select class="form-control selectpicker" title="Tranche d'âge">
+                            <option>Moins de 25 ans</option>
+                            <option>Entre 25 et 49 ans</option>
+                            <option>50 ans et plus</option>
+                        </select>
+                    </div>
+
+                    <!--Date de naissance-->
+                    <div class="form-group col-lg-6 col-md-6">
+                        <label for="BirthDay"></label>
+                        <input type="text" class="form-control" id="BirthDay" placeholder="Date de naissance   .. / .. / ....">
+                    </div>
+
+                    <!--Ville de naissance-->
+                    <div class="form-group col-lg-6 col-md-6">
+                        <label for="BirthCity"></label>
+                        <input type="text" class="form-control" id="BirthCity" placeholder="Ville de naissance ..">
+                    </div>
+
+                    <!--Dépt. de naissance-->
+                    <div class="form-group col-lg-6 col-md-6">
+                        <label for="BirthDept"></label>
+                        <input type="date" class="form-control" id="BirthDept" placeholder="Département ..">
+                    </div>
+
+                    
+
+
+
+                </form>
+                
+              </div>
+              
+            </div>
+
+        </div>
+
+
+    </div> -->
+    
+  </main>
+
+
+
+
+<script type="text/javascript">
+ 
+
+ ///initialise iscroll
+
+
+
+/////initialise drawer
+
+
+
+
+
+
+
+</script> 
+
+
+</body>
+
+</html>
