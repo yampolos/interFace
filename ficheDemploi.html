@@ -66,149 +66,151 @@
         <img class="col-lg-4 col-md-4" src="img/logo.png">
         <h1 class="fAriane col-lg-offset-5 col-lg-3 col-md-offset-4 col-md-4">demandeurs d'emploi</h1>
     </div>
-<!-- les boutons -->
-    <div class="col-lg-12 bg-body">
-        <div class="btnleft">
-            <button type="text" id="editDemploi" class="btnleftimg"> éditer la fiche</button>
-        </div>
-        <div class="btnright">
-            <button type="button" class="btnrightimg"></button><span>retour à la liste</span>
-        </div>
-    </div>
 
+    <main>
 <!-- zone du demandeur d'emploi -->
-<div class="ZDE">
-    <div class="profil_DE">
-        <a class="edit name_DE" href="#" id="username" data-type="text" data-pk="1" data-url="" data-title="Enter username">nom du demandeur..</a>
+    <div class="ZDE">
+        <div class="profil_DE">
 
-        <p class="action_DE">action : <a class="edit name_DE" href="#" id="action" data-type="select" data-pk="1" data-url="" data-title="Genre" class="selectpicker">flux</a></p>
-        <p>fiche créer le <span>(date)</span></p>
-        <p>dernière modification le <span>(date)</span></p>
-    </div>
+            <a class="edit name_DE" id="username" data-type="text" data-pk="1" data-url="" data-title="Enter username">nom du demandeur..</a>
 
-    <div class="col-lg-12">
-        <div class="col-lg-4">
-            <div class="photos">
-                <p>Photo non disponible</p>
-                <img src="img/icons/business.png">
-            </div>
-            <div class="3">
-                 <h3 class="titlefile">Documents</h3>
-                 <p>CV</p>
-                 <p>Lettre motiv</p>
-                 <p>attestation...</p>
-                 <button type="text" class="btnAddfile"> Ajouter un document</button>   
-            </div>
+            <p class="action_DE">action : <a class="edit" id="action" data-type="select" data-pk="1" data-url="" data-title="action" class="selectpicker">Choisir une action</a></p>
+
+            <p>fiche créer le <span>(00-00-0000)</span></p>
+
+            <p>dernière modification le <span>(date)</span></p>
         </div>
-        <div class="col-lg-4">
-            <div class="3">
-                <h3 class="titlefile">état civil</h3>
-                <p>Genre : <span>(sexe)</span></p>
-                <p>Trange d'âge : <span>(Tr-age)</span></p>
-                <p>Né(e) le : <span>(birth)</span></p>
-                <p>à : <span>(v-birth - pays)</span></p>
-                <p>Nationalité : <span>(nationalité)</span></p>
-                <p>Titre de séjour : <span>(O / N)</span></p>
-                <p>Autorisation de travail : <span>(O / N)</span></p>
-                <p>Enfant(s) en charge : <span>(nbre)</span></p>
+
+        <div class="col-lg-12">
+
+            <div class="col-lg-2">
+
+                <div class="photos">
+                    <p>Photo non disponible</p>
+                    <img src="img/icons/business.png">
+                </div>
+
+                <div class="3">
+                     <h3 class="titlefile">Documents</h3>
+                     <p>CV</p>
+                     <p>Lettre motiv</p>
+                     <p>attestation...</p>
+
+                     <!-- Telecharger un document -->
+                     <div class="form-group">
+                        <label for="fileinput">Télécharger un document</label>
+                        <input class="col-lg-12" type="file" id="fileinput">
+                    </div>
+                    
+
+                        
+                </div>
             </div>
-            <div class="blockfile">
-                <h3 class="titlefile">Ressources</h3>
-                <p>Référent FACE : <span>(nom)</span></p>
-                <p>ID Pôle Emploi : <span>(8 chiffres)</span></p>
-                <p>Référent (PE / ML) : <span>(nom)</span></p>
-                <p>Allocation : <span>(alloc)</span></p>
-                <p>RQTH : <span>(O / N)</span></p>
-                <p>QPV : <span>(nom quartier / N)</span></p>
+
+
+
+            <!-- ==== colone center ==== -->
+            <div class="col-lg-5">
+
+                <!-- ==== Etat civil ==== -->
+                <div class="3">
+                    <h3 class="titlefile">état civil</h3>
+                    <p>Genre : <span><a class="edit" id="genre" data-type="select" data-pk="1" data-url="" data-title="Genre" class="selectpicker">Choisir une genre</a></span></p>
+                    <p>Trange d'âge : <span><a class="edit" id="tAge" data-type="select" data-pk="1" data-url="" data-title="TranchedAge" class="selectpicker">Choisir une tranche</a></span></p>
+                    <p>Né(e) le : <span><a id="ddn" data-type="combodate" data-pk="1" data-url="" data-value="0000-00-00" data-title="Select date">0000-00-00</a></span></p>
+                    <p>à : <span><a id="country" data-type="select" data-pk="1" data-url="" data-title="Select country">pays de naissance ..</a></span></p>
+                    <p>Nationalité : <span><a id="natio" data-type="select" data-pk="1" data-url="" data-title="Select country">pays de naissance ..</a></span></p>
+                    <p>Titre de séjour : <span>
+                        <a class="edit" id="tSejour" data-type="select" data-pk="1" data-url="" data-title="" class="selectpicker">Choisir ..</a>
+                    </span></p>
+                    <p>Autorisation de travail : <span><a class="edit" id="autorTrv" data-type="select" data-pk="1" data-url="" data-title="" class="selectpicker">Choisir ..</a></span></p>
+                    <p>Enfant(s) en charge : <span><a class="edit" id="enfants" data-type="select" data-pk="1" data-url="" data-title="" class="selectpicker">Choisir ..</a></span></p>
+                </div>
+
+                <!-- ==== Ressources ==== -->
+                <div class="blockfile">
+                    <h3 class="titlefile">Ressources</h3>
+                    <p>Référent FACE : <span>
+                        <a class="edit"  data-type="text" data-pk="1" data-url="" data-title="Nom du référent..">nom du référent..</a>
+                    </span></p>
+                    <p>ID Pôle Emploi : <span>
+                        <a class="edit"  data-type="text" data-pk="1" data-url="" data-title="ID Pole Emploi..">00 00 00 00</a>
+                    </span></p>
+                    <p>Référent (PE / ML) : <span><a class="edit"  data-type="text" data-pk="1" data-url="" data-title="référent et structure..">Nom du référent / structure</a></span></p>
+                    <p>Allocation : <span>
+                        <a class="edit" id="alloc" data-type="select" data-pk="1" data-url="" data-title="" class="selectpicker">Choisir ..</a>
+                    </span></p>
+                    <p>RQTH : <span><a class="edit" id="rqth" data-type="select" data-pk="1" data-url="" data-title="" class="selectpicker">Choisir ..</a></span></p>
+                    <p>QPV : <span>
+                        <a class="edit" id="qpv" data-type="select" data-pk="1" data-url="" data-title="" class="selectpicker">Choisir ..</a>
+                    </span></p>
+                </div>
             </div>
+
+
+
+            <!-- ==== colone Right ==== -->
+            <div class="col-lg-5">
+
+                <!-- ==== Formation et métier ==== -->
+                <div class="3">
+                    <h3 class="titlefile">Formation et métier</h3>
+                    <p>Métier : <span>
+                        <a id="metier" data-type="select" data-pk="1" data-url="" data-title="">Choisir un métier ..</a>
+                    </span></p>
+                    <p>Niveau d'études : <span>
+                        <a class="edit" id="etudes" data-type="select" data-pk="1" data-url="" data-title="" class="selectpicker">Choisir ..</a>
+                    </span></p>
+                    <p>Catégorie socio-pro : <span>
+                        <a class="edit" id="socioPro" data-type="select" data-pk="1" data-url="" data-title="" class="selectpicker">Choisir ..</a>
+                    </span></p>
+                    <p>Diplôme professionnel : <span>
+                        <a class="edit"  data-type="text" data-pk="1" data-url="" data-title="ID Pole Emploi..">CACE..</a>
+                    </span></p>
+                    <p>Durée d'expérience : <span>
+                       <a class="edit" id="dureeExp" data-type="select" data-pk="1" data-url="" data-title="" class="selectpicker">Choisir ..</a>
+                    </span></p>
+                    <p>Dernier poste occupé : <span>
+                        <a class="edit"  data-type="text" data-pk="1" data-url="" data-title="lastJob..">poste / entreprise etc..</a>
+                    </span></p>
+                </div>
+
+                <!-- ==== Mobilité ==== -->
+                <div class="blockfile">
+                    <h3 class="titlefile">Mobilité</h3>
+                    <p>Permis de conduire : <span>
+                        <a id="permis" data-type="checklist" data-pk="1" data-url="" data-title="Select options">Choisir un permis</a>
+                    </span></p>
+                    <p>Moyen de locomotion : <span>
+                            <a id="locomotion" data-type="checklist" data-value="" data-pk="1" data-url="" data-title="Select options" >Choisir ..</a
+                    </span></p>
+                </div>
+
+                <!-- ==== Contact ==== -->
+                <div class="blockfile">
+                    <h3 class="titlefile">Contact</h3>
+                    <p>Adresse : <span>
+                        <a class="edit"  data-type="text" data-pk="1" data-url="" data-title="adresse..">Adresse ..</a>
+                    </span></p>
+                    <p>Ville : <span>
+                        <a id="ville" data-type="select" data-pk="1" data-url="" data-title="">Choisir une ville ..</a>
+                    </span></p>
+                    <p>Tél. (fixe) : <span><a class="edit" id="tel" data-type="tel" data-pk="1">00 00 00 00 00</a></span></p>
+                    <p>Tél. (portable) : <span><a class="edit" id="tel" data-type="tel" data-pk="1">00 00 00 00 00</a></span></p>
+                    <p>Mail : <span><a class="edit" id="email" data-type="email" data-pk="1">contact@example.com</a></span></p>
+                </div>
+            </div>
+
         </div>
-        <div class="col-lg-4">
-            <div class="3">
-                <h3 class="titlefile">Formation et métier</h3>
-                <p>Métier : <span>(métier)</span></p>
-                <p>Niveau d'études : <span>(niveau)</span></p>
-                <p>Catégorie socio-pro : <span>(socio-pro)</span></p>
-                <p>Diplôme professionnel : <span>(CACES...)</span></p>
-                <p>Durée d'expérience : <span>(durée)</span></p>
-                <p>Dernier poste occupé : <span>(nom poste)</span></p>
-            </div>
-            <div class="blockfile">
-                <h3 class="titlefile">Mobilité</h3>
-                <p>Permis de conduire : <span>(Lettre permis)</span></p>
-                <p>Moyen de locomotion : <span>(transport)</span></p>
-            </div>
-            <div class="blockfile">
-                <h3 class="titlefile">Contact</h3>
-                <p>Adresse : <span>(adresse)</span></p>
-                <p>Ville : <span>(ville)</span></p>
-                <p>Tél. (fixe) : <span>(numéro)</span></p>
-                <p>Tél. (portable) : <span>(numéro)</span></p>
-                <p>Mail : <span>(mail)</span></p>
-            </div>
-        </div>
-    </div>
+
 
 <!-- zone compte rendu du demandeur d'emploi -->
+
     <div class="col-lg-12 CR">
         <h3 class="titlefile CRE">compte-rendus des entretiens</h3>
         <button type="text" class="btnAddmemo">Ajouter un compte-rendu</button> 
     </div>
-<!--    <div class="col-lg-12">
-        <h3 class="titlememo">Rendez-vous 01</h3>
-        <p>Rendez-vous du : <span class="datememo">(date)</span>suivi par : <span>(nom référent FACE)</span></p>
-        <div class="editmemo">
-            <button type="text" class="imgmemo"></button><span class="btnmemo">Editer</span>
-        </div>
-        <div class="col-lg-8">
-            <h3 class="titleresum">Résumé</h3>
-            <div class="resum">
-                <p class="textresum">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, quis. 
-                    Quaerat, quia! Labore, dolorum similique repellat ipsa omnis numquam sunt! 
-                    Possimus et omnis mollitia sint dolorum ipsam iste, voluptates praesentium!
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae quaerat eveniet 
-                    quo reiciendis fugit consequuntur eos sapiente, earum, optio, laborum pariatur sit. 
-                    Culpa in a mollitia aliquid non soluta enim.</p>
-                <p class="textresum">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam ipsam iste 
-                    consectetur tempora tempore facilis cupiditate aut quos accusamus, perspiciatis 
-                    similique, dignissimos quae mollitia vitae dolore, voluptate distinctio quaerat 
-                    provident. Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                    Autem dolore nobis alias eos est aliquid, excepturi vitae similique dolores, 
-                    doloremque praesentium non eum perferendis aperiam eaque quod tenetur 
-                    impedit commodi.</p>
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <h3 class="titleresum">Démarches à suivre</h3>
-            <div class="resum">
-                <p class="textresum">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                    Aliquam ipsam iste consectetur tempora tempore facilis cupiditate aut quos 
-                    accusamus.</p>
-                <p class="textresum"> dolore nobis alias eos est aliquid, excepturi vitae similique dolores, 
-                    doloremque praesentium non eum perferendis aperiam eaque quod tenetur 
-                    impedit commodi.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-12">
-        <div class="blockmemo">
-            <h3 class="titlememo">Rendez-vous 02</h3>
-            <p>Rendez-vous du : <span class="datememo">(date)</span>suivi par : <span>(nom référent FACE)</span></p>
-            <div class="editmemo">
-                <button type="text" class="imgmemo"></button><span class="btnmemo">Editer</span>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-12">
-        <div class="blockmemo">
-            <h3 class="titlememo">Rendez-vous 03</h3>
-            <p>Rendez-vous du : <span class="datememo">(date)</span>suivi par : <span>(nom référent FACE)</span></p>
-            <div class="editmemo">
-                <button type="text" class="imgmemo"></button><span class="btnmemo">Editer</span>
-            </div>
-        </div>
-    </div> -->
 
-    <!-- div créer pour height auto (div ZDE) -->
     <div class="clear"></div>
 
 
@@ -332,23 +334,12 @@
     </div> 
 
 </div>
+</main>
 
 
 
 
-    <!-- initialise iscroll -->
-<script type="text/javascript">
-    var myScroll;
-    function loaded() {
-        myScroll = new IScroll('#wrapper');
-    }
-</script>
-<!-- initialise drawer -->
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('.drawer').drawer();
-    });
-</script>
+
 
 </body>
 

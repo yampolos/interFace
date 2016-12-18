@@ -492,8 +492,7 @@ button:hover {
 	height: auto;
 	margin: 0% 5% 2%;
 	padding: 2%;
-	box-shadow: 1px 1px 3px 0px #656565;
-	background-color: white;
+	background-color: ;
 	overflow: hidden;
 }
 .ZDE p {
@@ -542,6 +541,13 @@ button:hover {
 	background-size: 10%;
 	height: 45px;
 	width: 240px;
+}
+#fileinput {
+	color: #4d4a4a;
+	font-size: 10px;
+}
+#fileinput:nth-word(1)  {
+	font-size: 9px;
 }
 
 .CR {
