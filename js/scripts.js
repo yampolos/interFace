@@ -291,6 +291,14 @@ $('#enfants').click(function() {
         $(this).editable();
     });
 
+     $('.resume').click(function() {
+        $.fn.editable.defaults.mode = 'inline';
+            //remote source (advanced)
+        $(this).editable({
+          rows: 10
+        });
+    });
+
   
 
 /* le drawer    $(".btn-tiroire").click(function() {
@@ -306,6 +314,13 @@ $('#enfants').click(function() {
         });
         event.stopPropagation();
     });  */
+
+//////collapse résumé
+  $('.blockresum').collapse({
+  toggle: true
+  });
+
+
 
 
 });

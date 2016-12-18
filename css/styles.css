@@ -28,7 +28,6 @@ bleue:
 bleu-vert de la charte graphique
 #24888f  /  rgb(36,136,143)
 
-
 */
 
 
@@ -432,7 +431,8 @@ label {
 
 
 /* ============= Contenu de la Page ============ */
-/*floryan*/
+/* -------------      floryan      ------------- */
+
 .bg-body {
 	background-image: url(../img/bgBody.png);
 }
@@ -607,8 +607,23 @@ button:hover {
 .blockresum {
 	background-color: white;
 }
+.panel-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: inherit;
+}
+.panel-group .panel-heading + .panel-collapse > .list-group, .panel-group .panel-heading + .panel-collapse > .panel-body {
+    border-top: 0;
+}
+.panel-title {
+    font-size: 18px;
+    margin-top: 10px;
+}
 .resum {
 	padding: 1% 3%;
+}
+.demarche {
 	border-left: 2px solid #e6e6e6;
 }
 .titleresum {
