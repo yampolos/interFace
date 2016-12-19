@@ -301,9 +301,12 @@ $('#enfants').click(function() {
 
 
      $('#adRdv').click(function() {
-      $('#lastRdv').clone().insertBefore($('#lastRdv'));
-// $('#lastRdv').append('<div class="panel panel-default" id="lastRdv"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Rendez-vous 01</a></h4><p>Rendez-vous du : <span class="datememo">(date)</span>suivi par : <span>(nom référent FACE)</span></p></div></div>');
+      //$('#lastRdv').clone().insertBefore($('#lastRdv'));
+      $('#lastRdv').append('<div class="panel panel-default" id="addRdv"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Rendez-vous 01</a></h4><p>Rendez-vous du : <span class="datememo">(date)</span>suivi par : <span>(nom référent FACE)</span></p></div><div id="collapse1" class="panel-collapse collapse in col-lg-12 blockresum"><div class="panel-body col-lg-8 resum"><h3 class="titleresum">Résumé</h3><p class="textresum"><a class="resume" data-type="textarea" data-pk="1">Votre texte ici ....</a></p></div><div class="col-lg-4 resum demarche"><h3 class="titleresum">Démarches à suivre</h3><p class="textresum"><a class="resume" data-type="textarea" data-pk="1">Votre texte ici ....</a></p></div></div><button id="cncl">Annuler</button><button id="vld">Valider</button>');
     });
+     $( '#cncl').click(function() {
+        $('#accordion').remove('#addRdv');
+      });
 
      
 
@@ -333,3 +336,10 @@ $('#enfants').click(function() {
 
 
 });
+$('.resume').load(function() {
+        $.fn.editable.defaults.mode = 'inline';
+            //remote source (advanced)
+        $(this).editable({
+          rows: 10
+        });
+    });
