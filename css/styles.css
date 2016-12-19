@@ -30,6 +30,13 @@ bleu-vert de la charte graphique
 
 */
 
+/*.dz-error-mark svg g g {
+	fill: #2E3942;
+}*/
+
+/*.dz-image img:hover {
+	height: 100px;
+}*/
 
 body{
 	background-image: url(../img/bgBody.png);

@@ -46,7 +46,7 @@ $(document).ready(function() {
             });
     });
 
-
+/*
 $('#enfants').click(function() {
         $.fn.editable.defaults.mode = 'inline';
         $(this).editable({
@@ -66,7 +66,7 @@ $('#enfants').click(function() {
                    ]
             });
     });
-
+*/
 
     $('#autorTrv').click(function() {
         $.fn.editable.defaults.mode = 'inline';
@@ -300,32 +300,30 @@ $('#enfants').click(function() {
     });
 
 
-     $('#adRdv').click(function() {
+     $('#addMemo').click(function() {
       //$('#lastRdv').clone().insertBefore($('#lastRdv'));
-      $('#lastRdv').append('<div class="panel panel-default" id="addRdv"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Rendez-vous 01</a></h4><p>Rendez-vous du : <span class="datememo">(date)</span>suivi par : <span>(nom référent FACE)</span></p></div><div id="collapse1" class="panel-collapse collapse in col-lg-12 blockresum"><div class="panel-body col-lg-8 resum"><h3 class="titleresum">Résumé</h3><p class="textresum"><a class="resume" data-type="textarea" data-pk="1">Votre texte ici ....</a></p></div><div class="col-lg-4 resum demarche"><h3 class="titleresum">Démarches à suivre</h3><p class="textresum"><a class="resume" data-type="textarea" data-pk="1">Votre texte ici ....</a></p></div></div><button id="cncl">Annuler</button><button id="vld">Valider</button>');
+      $('#lastRdv').append('<div class="panel panel-default" id="newRdv"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Rendez-vous 01</a></h4><p>Rendez-vous du : <span class="datememo">(date)</span>suivi par : <span>(nom référent FACE)</span></p></div><div id="collapse1" class="panel-collapse collapse in col-lg-12 blockresum"><div class="panel-body col-lg-8 resum"><h3 class="titleresum">Résumé</h3><p class="textresum"><a class="resume" data-type="textarea" data-pk="1">Votre texte ici ....</a></p></div><div class="col-lg-4 resum demarche"><h3 class="titleresum">Démarches à suivre</h3><p class="textresum"><a class="resume" data-type="textarea" data-pk="1">Votre texte ici ....</a></p></div></div><button id="cncl">Annuler</button><button id="vld">Valider</button>');
+
+        $('#newRdv').ready(function() {
+            $.fn.editable.defaults.mode = 'inline';
+                //remote source (advanced)
+            $('.resume').editable({
+              rows: 10
+            });
+        });
+
+        $('#cncl').click(function() {
+          $('#newRdv').remove();
+        });
+
     });
-     $( '#cncl').click(function() {
-        $('#accordion').remove('#addRdv');
-      });
+     
 
      
 
 // .dz-error-mark
   
 
-/* le drawer    $(".btn-tiroire").click(function() {
-        $(this).animate({
-            left: '90%',});
-
-    });
-    
-    $(".fa-close").click(function(event) {
-        var par = $(event.target).parent();
-        $(par).animate({
-            left: '0',
-        });
-        event.stopPropagation();
-    });  */
 
 //////collapse résumé
   $('.blockresum').collapse({
@@ -334,12 +332,4 @@ $('#enfants').click(function() {
 
 
 
-
 });
-$('.resume').load(function() {
-        $.fn.editable.defaults.mode = 'inline';
-            //remote source (advanced)
-        $(this).editable({
-          rows: 10
-        });
-    });
