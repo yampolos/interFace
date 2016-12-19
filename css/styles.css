@@ -21,7 +21,7 @@ orange de la charte graphique
 
 black:
 gris foncé pour les boutons et texte
-#4d4a4a  /  rgb(77,74,74)
+#4d4a4a   /  rgb(77,74,74)
 
 
 bleue:
@@ -490,9 +490,9 @@ button:hover {
 }
 .ZDE {
 	height: auto;
-	margin: 0% 5% 2%;
+	margin: 2% 5% 2%;
 	padding: 2%;
-	background-color: ;
+	background-color: white;
 	overflow: hidden;
 }
 .ZDE p {
@@ -504,6 +504,7 @@ button:hover {
 .name_DE {
 	text-transform: uppercase;
 	font-family: 'GOTHAM';
+	font-size: 20px;
 }
 .action_DE {
 	text-transform: capitalize;
@@ -665,4 +666,67 @@ form .col-lg-12, form .col-lg-6,form .col-lg-3 {
 	margin-top: 10px;
 	margin-bottom: 10px; 
 }
+
+/* drope zone custom */
+.dz-filename span {
+	font-size: 9px;
+}
+.dz-error-mark svg, .dz-success-mark svg{
+	height: 20px;
+	width: 20px;
+}
+.dz-clickable{
+	color: #ed9767;
+	border: 1px dashed #4d4a4a;
+	overflow: hidden;
+	width: 60%;
+	min-height: 50px;
+	padding: 10px;
+	vertical-align: center;
+}
+.dz-details{
+	color: #4d4a4a;
+}
+.dropzone .delt{
+	height: 30px;
+	width: 30px;
+}
+.dz-message span{
+	margin-left: 30px;
+}
+.dz-message{
+	background-image: url(../img/icons/addDocOrange.png);
+	background-repeat: no-repeat;
+	background-size:20px;
+}
+
+/* ========= Colors ========== */
+/*
+
+light :
+couleur des icones light pour le hover
+#fafafa  /  rgb(250,250,250)
+
+Grey :
+couleur des icones du file d'ariane
+#e6e6e6  /  rgb(230,230,230)
+
+Orange:
+orange de la charte graphique
+#ed9767  /  rgb(237,151,103)
+
+black:
+gris foncé pour les boutons et texte
+#4d4a4a   /  rgb(77,74,74)
+
+
+bleue:
+bleu-vert de la charte graphique
+#24888f  /  rgb(36,136,143)
+
+*/
+
+
+
+
 

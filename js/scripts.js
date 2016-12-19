@@ -299,6 +299,15 @@ $('#enfants').click(function() {
         });
     });
 
+
+     $('#adRdv').click(function() {
+      $('#lastRdv').clone().insertBefore($('#lastRdv'));
+// $('#lastRdv').append('<div class="panel panel-default" id="lastRdv"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Rendez-vous 01</a></h4><p>Rendez-vous du : <span class="datememo">(date)</span>suivi par : <span>(nom référent FACE)</span></p></div></div>');
+    });
+
+     
+
+// .dz-error-mark
   
 
 /* le drawer    $(".btn-tiroire").click(function() {

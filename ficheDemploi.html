@@ -14,23 +14,20 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/drawer.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-editable.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 
 
     <!-- JS -->
     <script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+    <script type="text/javascript" src="js/dropzone.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/moment.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-datepicker.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap-datepicker.fr.min.js" charset="UTF-8"></script>
     <script type="text/javascript" src="js/bootstrap-editable.min.js"></script>
     <script type="text/javascript" src="js/drawer.js"></script>
     <script type="text/javascript" src="js/iscroll.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap-select.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
-    <script type="text/javascript">
 
 </script>
 
@@ -70,20 +67,18 @@
     <main>
 <!-- zone du demandeur d'emploi -->
     <div class="ZDE">
-        <div class="profil_DE">
-
-            <a class="edit name_DE" id="username" data-type="text" data-pk="1" data-url="" data-title="Enter username">nom du demandeur..</a>
-
-            <p class="action_DE">action : <a class="edit" id="action" data-type="select" data-pk="1" data-url="" data-title="action" class="selectpicker">Choisir une action</a></p>
-
-            <p>fiche créer le <span>(00-00-0000)</span></p>
-
-            <p>dernière modification le <span>(date)</span></p>
-        </div>
+        
 
         <div class="col-lg-12">
 
-            <div class="col-lg-2">
+            <div class="col-lg-4">
+
+                <div class="profil_DE">
+            <a class="edit name_DE" id="username" data-type="text" data-pk="1" data-url="" data-title="Enter username">nom du demandeur..</a>
+            <p class="action_DE">action : <a class="edit" id="action" data-type="select" data-pk="1" data-url="" data-title="action" class="selectpicker">Choisir une action</a></p>
+            <p>Crée le <span>(00-00-0000)</span></p>
+            <p>Modifié le <span>(00-00-0000)</span></p>
+        </div>
 
                 <div class="photos">
                     <p>Photo non disponible</p>
@@ -92,15 +87,21 @@
 
                 <div class="3">
                      <h3 class="titlefile">Documents</h3>
-                     <p>CV</p>
-                     <p>Lettre motiv</p>
-                     <p>attestation...</p>
+                     <p><a href="doc/demandeurs d'emploi.pdf" target="pdf">Voir le CV</a></p>
+                     <p><a href="doc/demandeurs d'emploi.pdf" target="pdf">Voir la Lettre de Motivation</a></p>
 
-                     <!-- Telecharger un document -->
+                     <!-- Telecharger un document 
                      <div class="form-group">
                         <label for="fileinput">Télécharger un document</label>
                         <input class="col-lg-12" type="file" id="fileinput">
-                    </div>
+                    </div>-->
+
+                    <form class="dropzone" action="/target-url" id="my-dropzone" class="dropzone">
+                      <div class="fallback">
+                        <input name="file" type="file" multiple />
+                      </div>
+
+                    </form>
                     
 
                         
@@ -110,7 +111,7 @@
 
 
             <!-- ==== colone center ==== -->
-            <div class="col-lg-5">
+            <div class="col-lg-4">
 
                 <!-- ==== Etat civil ==== -->
                 <div class="3">
@@ -150,7 +151,7 @@
 
 
             <!-- ==== colone Right ==== -->
-            <div class="col-lg-5">
+            <div class="col-lg-4">
 
                 <!-- ==== Formation et métier ==== -->
                 <div class="3">
@@ -208,14 +209,14 @@
 
     <div class="col-lg-12 CR">
         <h3 class="titlefile CRE">compte-rendus des entretiens</h3>
-        <button type="text" class="btnAddmemo">Ajouter un compte-rendu</button> 
+        <button type="text" id="adRdv" class="btnAddmemo">Ajouter un compte-rendu</button> 
     </div>
 
     <div class="clear"></div>
 
 
     <div class="panel-group" id="accordion">
-        <div class="panel panel-default">
+        <div class="panel panel-default" id="lastRdv">
             <div class="panel-heading">
                 <h4 class="panel-title">
                     <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Rendez-vous 01</a>
