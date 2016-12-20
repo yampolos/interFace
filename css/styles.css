@@ -4,6 +4,11 @@
   src: url('../fonts/GOTHAM-MEDIUM.OTF');
 }
 
+/*width table mozilla*/
+@-moz-document url-prefix() {
+  fieldset { display: table-cell; }
+}
+
 /* ========= Colors ========== */
 /*
 
@@ -38,6 +43,13 @@ bleu-vert de la charte graphique
 	height: 100px;
 }*/
 
+/*
+-moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+-webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+
+*/
+
 body{
 	background-image: url(../img/bgBody.png);
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -63,13 +75,16 @@ button{
 
 
 .loginBox, .btn-menuPrincipal, .btnPhoto, .btn-valider, 
-.btn-annuler, select, input {
-	-webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.59);
-	-moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.59);
-	box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.59);
+.btn-annuler, select, input, .ZDE, .screen {
+	-moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	border-radius: 4px;
 }
 
-
+textarea{
+	width: 90%;
+}
 /* ===== la class edit =====*/
 
 
@@ -495,12 +510,14 @@ button:hover {
 	font-style: none;
 	color: white;
 }
-.ZDE {
+.ZDE, .screen{
 	height: auto;
-	margin: 2% 5% 2%;
+	margin-top: 20px;
+	margin-bottom: 60px;
 	padding: 2%;
 	background-color: white;
 	overflow: hidden;
+	
 }
 .ZDE p {
 	color: #4d4a4a;
@@ -559,8 +576,8 @@ button:hover {
 }
 
 .CR {
-	margin-top: 3%;
-	border-bottom: 2px solid #e6e6e6;
+	margin-top: 4%;
+	margin-bottom: 10px;
 }
 .btnAddmemo {
 	float: right;
@@ -699,14 +716,93 @@ form .col-lg-12, form .col-lg-6,form .col-lg-3 {
 	width: 30px;
 }
 .dz-message span{
-	margin-left: 30px;
+	margin-left: 34px;
+	line-height: 50px;
+}
+.dz-message{
 }
 .dz-message{
 	background-image: url(../img/icons/addDocOrange.png);
+	background-position: left center;
 	background-repeat: no-repeat;
-	background-size:20px;
+	background-size:30px;
 }
 
+
+/* //////// ===== LISTE DEMANDEURS D'EMPLOI ===== //////// */
+
+/* ======== table  ============*/
+.screen{
+	overflow: hidden;
+	padding: 20px 40px 60px 40px;
+}
+#listDE{
+	margin: 40px auto;
+	background-color: white;
+}
+tr {
+	height: 60px;
+}
+tr:nth-child(2n+1){
+	background-color: #fafafa;
+}
+
+tr:last-of-type{
+	border-bottom: 6px solid rgba(230,230,230,0.6);
+}
+
+td, th{
+	padding: 6px 16px;
+	vertical-align: center;
+}
+tr:first-of-type{
+	background-color: #24888f;
+	color: white;
+
+}
+th{
+	border-right: 1px solid rgba(255,255,255,.6);
+	
+}
+
+th:last-of-type{
+	border-right: 0;
+}
+td{
+	border-right: 1px solid rgba(230,230,230,0.6);
+	border-top: 6px solid white;
+}
+
+td:last-of-type{
+	border-right: 0;
+}
+td a{
+	font-family: 'GOTHAM';
+}
+td a:hover{
+	color: #ed9767;
+}
+
+/* pagination */
+
+.pagin{
+	margin: 20px auto;
+}
+.pagination > li > a, .pagination > li > span {
+    padding: 6px 12px;
+    color: #ed9767;
+    height: 60px;
+    width: 60px;
+    line-height: 50px;
+    text-align: center;
+}
+.prevNext span{
+	border: 0;
+	font-size: 40px;
+}
+.prevNext li{
+	border: 0;
+}
 /* ========= Colors ========== */
 /*
 
