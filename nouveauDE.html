@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>INTERFACE Gestionnaire de flux</title>
+
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/drawer.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+
+	<!-- JS -->
+	<script type="text/javascript" src="js/jquery-3.1.0.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/drawer.js"></script>
+    <script type="text/javascript" src="js/iscroll.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+
+</head>
+
+
+
+
+
+<body class="drawer drawer--left">
+
+
+  <!-- ======= Drawer Menu ======= -->
+
+  <header>
+
+    <button type="button" class="drawer-toggle drawer-hamburger">
+      <span class="sr-only">toggle navigation</span>
+      <span class="drawer-hamburger-icon"></span>
+    </button>
+
+    <nav class="drawer-nav" role="navigation">
+
+      <div class="drawer-menu">
+
+        <img class="img-responsive logoInterFace" src="img/logoReserve.png">
+
+        <p class="userlogin">Nom et prénom de l'utilisateur<br><span>Chargé(e) de mission</span></p>
+        <a href=""><button class="btn-menuPrincipal btn-bg1">Demandeurs d'emploi</button></a>
+        <a href=""><button class="btn-menuPrincipal btn-bg2">Offres d'Emploi</button></a>
+        <a href=""><button class="btn-menuPrincipal btn-bg5">Entreprises</button></a>
+        <a href=""><button class="btn-menuPrincipal btn-bg3">Rendez-vous</button></a>
+        <a href="login.html"><button class="btn-menuPrincipal btn-bg4">Deconnexion</button></a>
+
+      </div>
+    </nav>
+
+  </header>
+
+
+
+  <!-- ======= Page contenu ======= -->
+
+  <main role="main">
+    <div class="container-fluid">
+
+        <div class="row">
+
+
+            <!-- Zone logo et file d'Ariane -->
+
+            <div class="entete col-lg-12 col-md-12">
+                <img class="col-lg-4 col-md-4" src="img/logo.png">
+                <h1 class="fAriane col-lg-offset-5 col-lg-3 col-md-offset-4 col-md-4">demandeurs d'emploi</h1>
+            </div>
+
+
+            <!-- Page créer un Flux -->
+          
+              <div class="screenCreation col-lg-offset-1 col-lg-10 col-md-offset-1 col-md-10">
+
+                <h1 class="titrePage col-lg-12 col-md-12">Ajouter un demandeur d'emploi</h1>
+
+                <form class="NewFlux">
+
+                <!-- Action et btn telecharger un document-->
+                  <div class=" col-lg-12 col-md-12">
+
+                    <span class="select-wrapper col-lg-3 col-md-3">
+                      <select class="inputNewFlux">
+                        <option> Choisir une action</option>
+                        <option> - Annonceur Sentinelle</option>
+                        <option> - Flux</option>
+                        <option> - IRVIN</option>
+                        <option> - Numérique</option>
+                        <option> - Securité</option>
+                    </select>
+                    </span>
+
+                    <a href=""><div class="btn-menuPrincipal btnAdd col-lg-6 col-md-6">Télécharger (cv, autres...)</div></a>
+                  </div>
+
+                <!-- Colonne Gauche du Formulaire -->
+                  <div class=" col-lg-6 col-md-6">
+
+                    <h3 class="titreForm">Etat Civil</h3>
+
+                    <!--nom et prénom-->
+                    <label for=""></label>
+                    <input type="" class="col-lg-5 col-md-5" id="" placeholder="Nom ..">
+                    <label for=""></label>
+                    <input type="" class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5" id="" placeholder="Prénom ..">
+
+                    <!--genre-->
+                    <span class="select-wrapper col-lg-5 col-md-5">
+                      <select class="inputNewFlux">
+                        <option> Choisir un genre</option>
+                        <option> - Autre</option>
+                        <option> - Femme</option>
+                        <option> - Homme</option>
+                    </select>
+                    </span>
+
+                    <!--photo-->
+                    <button class="btnPhoto col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5">
+                    Photo ..</button>
+
+                    <!--Date de naissance-->
+                    <label for=""></label>
+                    <input type="" class="col-lg-5 col-md-5" id="" placeholder="Date de naissance ../../....">
+
+                    <!--Tranche d'age-->
+                    <span class="select-wrapper col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5">
+                      <select class="inputNewFlux">
+                        <option> Tranche d'âge</option>
+                        <option> - Moins de 25 ans</option>
+                        <option> - De 25 à 49 ans</option>
+                        <option> - 50 ans et plus</option>
+                    </select>
+                    </span>
+
+                    <!--Ville de naissance-->
+                    <label for=""></label>
+                    <input type="" class="col-lg-5 col-md-5" id="" placeholder="Ville de naissance ..">
+
+                    <!--Dépt. de naissance-->
+                    <label for=""></label>
+                    <input type="" class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5" id="" placeholder="Dépt. de naissance ..">
+
+                    <!--Pays de naissance-->
+                    <span class="select-wrapper col-lg-5 col-md-5">
+                      <select class="inputNewFlux">
+                        <option> Pays</option>
+                        <option> - Pays 1</option>
+                        <option> - Pays 120 ......</option>
+                        <option> - Pays n</option>
+                    </select>
+                    </span>
+
+                    <!--Nationalité-->
+                    <span class="select-wrapper col-lg-offset-1  col-lg- col-md-offset-15 col-md-offset-1 col-md-5">
+                      <select class="inputNewFlux">
+                        <option> Nationalité</option>
+                        <option> - Ouzbeque</option>
+                        <option> - Nationalité 2</option>
+                        <option> - Nationalité 3</option>
+                    </select>
+                    </span>
+
+                    <!--Titre de séjour-->
+                    <span class="select-wrapper col-lg-5 col-md-5">
+                      <select class="inputNewFlux">
+                        <option> Titre de séjour</option>
+                        <option> - Non</option>
+                        <option> - Oui</option>
+                    </select>
+                    </span>
+
+                    <!--Autorisation de travailler-->
+                    <span class="select-wrapper col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5">
+                      <select class="inputNewFlux">
+                        <option> Autorisation de travailler</option>
+                        <option> - Non</option>
+                        <option> - Oui</option>
+                    </select>
+                    </span>
+
+                    <!--Nombre d'enfants-->
+                    <label for=""></label>
+                    <input type="" class="col-lg-5 col-md-5" id="" placeholder="Enfant(s) en charge ..">
+
+
+                    <h3 class="titreForm col-lg-12 col-md-12">coordonnées</h3>
+                    <!--Adresse-->
+                    <label for=""></label>
+                    <input type="" class="col-lg-11 col-md-11" id="" placeholder="Adresse ..">
+
+                    <!--Code postale-->
+                    <label for=""></label>
+                    <input type="" class="col-lg-5 col-md-5" id="" placeholder="Code postal ..">
+
+                    <!--Ville-->
+                    <label for=""></label>
+                    <input type="" class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5" id="" placeholder="Ville ..">
+
+                    <!--Tél mobile-->
+                    <label for=""></label>
+                    <input type="" class="col-lg-5 col-md-5" id="" placeholder="Tél. mobile ..">
+
+                    <!--Tél fixe-->
+                    <label for=""></label>
+                    <input type="" class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5" id="" placeholder="Tél. fixe ..">
+
+                    <!--Email-->
+                    <label for=""></label>
+                    <input type="" class="col-lg-11 col-md-11" id="" placeholder="Email ..">
+
+                  </div><!-- End Colonne Gauche du Formulaire -->
+
+
+
+                <!-- Colonne Droite du Formulaire -->
+                  <div class=" col-lg-6 col-md-6">
+
+                    <h3 class="titreForm col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">ressources</h3>
+
+                    <!--ID poleEmploi-->
+                    <label for=""></label>
+                    <input type="" class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5" id="" placeholder="ID Pole Emploi ..">
+
+                    <!--Référent-->
+                    <label for=""></label>
+                    <input type="" class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5" id="" placeholder="Référent et structure ..">
+
+                    <!--Allocations-->
+                    <span class="select-wrapper col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5">
+                      <select class="inputNewFlux">
+                        <option> Allocations</option>
+                        <option> - Aucune</option>
+                        <option> - RSA</option>
+                        <option> - RSA Socle</option>
+                    </select>
+                    </span>
+
+                    <!--si autre allocation-->
+                    <label for=""></label>
+                    <input type="" class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5" id="" placeholder="Précisez si autre ..">
+
+                    <!--RQTH-->
+                    <span class="select-wrapper col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5">
+                      <select class="inputNewFlux">
+                        <option> RQTH</option>
+                        <option> - Non</option>
+                        <option> - Oui</option>
+                    </select>
+                    </span>
+
+                    <!--QPV-->
+                    <span class="select-wrapper col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5">
+                      <select class="inputNewFlux">
+                        <option> QPV</option>
+                        <option> - Le Blosne</option>
+                        <option> - Villejean</option>
+                    </select>
+                    </span>
+
+                    <h3 class="titreForm col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+                    Formation et Métier</h3>
+
+                    <!--Niveau d'études-->
+                    <span class="select-wrapper col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5">
+                      <select class="inputNewFlux">
+                        <option> Niveau d'études</option>
+                        <option> - Bac</option>
+                        <option> - Bac + 10 000</option>
+                    </select>
+                    </span>
+
+                    <!--Catégorie sociopro-->
+                    <span class="select-wrapper col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5">
+                      <select class="inputNewFlux">
+                        <option> Catégorie socioprofessi(...)  </option>
+                        <option> - Artisan(e)</option>
+                        <option> - Artiste</option>
+                    </select>
+                    </span>
+
+                    <!--Diplôme professionnel-->
+                    <label for=""></label>
+                    <input type="" class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5" id="" placeholder="Diplôme professionnel ..">
+
+                    <!--Métier-->
+                    <span class="select-wrapper col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5">
+                      <select class="inputNewFlux">
+                        <option> Métier  </option>
+                        <option> - Métier 1 de la liste</option>
+                        <option> - Métier 2 de la liste</option>
+                    </select>
+                    </span>
+
+
+                    <h3 class="titreForm col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+                    Expérience</h3>
+
+                    <!--Durée-->
+                    <span class="select-wrapper col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5">
+                      <select class="inputNewFlux">
+                        <option> Durée  </option>
+                        <option> - 0</option>
+                        <option> - Moins de 1 ans</option>
+                        <option> - 1 à 3 ans</option>
+                        <option> - 3 à 5 ans</option>
+                        <option> - 5 ans et plus</option>
+                    </select>
+                    </span>
+
+                    <!--Dernier poste-->
+                    <label for=""></label>
+                    <input type="" class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5" id="" placeholder="Dernier poste occupé ..">
+
+                    <!--Dernier poste : entreprise-->
+                    <label for=""></label>
+                    <input type="" class="col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5" id="" placeholder="Entreprise ..">
+
+
+
+
+
+                    <h3 class="titreForm col-lg-offset-1 col-lg-11 col-md-offset-1 col-md-11">
+                    Mobilité</h3>
+
+                    <!--Permis-->
+                    <span class="select-wrapper col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5">
+                      <select class="inputNewFlux">
+                        <option> Permis  </option>
+                        <option> - Aucun</option>
+                        <option> - B</option>
+                    </select>
+                    </span>
+
+                    <!--Moyen de locomation-->
+                    <span class="select-wrapper col-lg-offset-1 col-lg-5 col-md-offset-1 col-md-5">
+                      <select class="inputNewFlux">
+                        <option> Moyen de locomotion  </option>
+                        <option> - Aucun</option>
+                        <option> - Transports en commun</option>
+                    </select>
+                    </span>
+
+                    
+                  </div><!-- End Colonne Droite du Formulaire -->
+
+                  <!-- VALIDER / ANNULER le formulaire -->
+                  <div class="col-lg-12 col-md-12">
+                    <!--Annuler-->
+                    <button class="btnCancel col-lg-6 col-md-6">
+                    Annuler</button>
+
+                    <!--Valider-->
+                    <button class="btnValider col-lg-6 col-md-6">
+                    Valider</button>
+                  </div>
+
+
+
+                </form>
+                
+              </div>
+              
+            </div>
+
+        </div>
+
+
+    </div>
+    
+  </main>
+
+
+
+<!-- initialise iscroll -->
+<script type="text/javascript">
+  var myScroll;
+  function loaded() {
+      myScroll = new IScroll('#wrapper');
+  }
+</script>
+
+<!-- initialise drawer -->
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.drawer').drawer();
+  });
+</script> 
+
+
+</body>
+
+</html>

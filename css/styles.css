@@ -461,6 +461,24 @@ label {
 span {
 	font-family: 'GOTHAM';
 }
+.retourList{
+	width: 20%;
+	color: #ed9767;
+	margin: auto;
+	height: 60px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 13px;
+	line-height: 80px;
+	background-image: url(../img/icons/previous.png);
+	background-repeat: no-repeat;
+	background-size: 27px;
+	background-position: top center;
+}
+.retourList:hover{
+	color: #4d4a4a;
+	border: 1px dashed rgb(77,74,74);
+}
 .btnleftimg {
 	background-image: url(../img/icons/file.png);
 	background-repeat: no-repeat;
@@ -488,15 +506,7 @@ span {
 	margin-left: 5%;
 	vertical-align: -6px;
 }
-.btnrightimg {
-	background-image: url(../img/icons/back-arrow.png);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 50%;
-	margin-left: -10%;
-	height: 30px;
-	width: 30px;
-}
+
 button {
 	border: none;
 	color: #fafafa;
@@ -526,7 +536,7 @@ button:hover {
 	margin: 2% auto;
 }
 .name_DE {
-	text-transform: uppercase;
+	text-transform: capitalize;
 	font-family: 'GOTHAM';
 	font-size: 20px;
 }
@@ -730,6 +740,30 @@ form .col-lg-12, form .col-lg-6,form .col-lg-3 {
 
 
 /* //////// ===== LISTE DEMANDEURS D'EMPLOI ===== //////// */
+
+/* === recherche === */
+ .rech > .input[type=text] {
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+.rech > input[type=text]:focus {
+    width: 100%;
+}
+.rech > .input {
+	height: 50px!important;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url(../img/icons/magnifier.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width .4s ease-in-out;
+    transition: width .4s ease-in-out;
+}
 
 /* ======== table  ============*/
 .screen{
