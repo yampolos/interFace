@@ -462,14 +462,14 @@ span {
 	font-family: 'GOTHAM';
 }
 .retourList{
-	width: 20%;
+	width: 80%;
 	color: #ed9767;
 	margin: auto;
-	height: 60px;
+	height: 70px;
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 13px;
-	line-height: 80px;
+	line-height: 90px;
 	background-image: url(../img/icons/previous.png);
 	background-repeat: no-repeat;
 	background-size: 27px;
@@ -558,15 +558,27 @@ button:hover {
 }
 .photos {
 	width: 150px;
-	height: 200px;
+	height: auto;
 	margin-top: 20px;
-	background-color: #e6e6e6;
+	
 }
-.photos p{
-	font-size: 10px;
-}
+
 .photos img {
-	width: 60px;
+	width: 100%;
+	background-color: #e6e6e6;
+	position: relative;
+	z-index: 1;
+}
+
+#imgEdit{
+	height: 20px;
+	width: 20px;
+	background-image: url(../img/icons/logOutOrange.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	position: absolute;
+	z-index: 2;
+
 }
 .btnAddfile {
 	background-image: url(../img/icons/addDocLight.png);
@@ -738,33 +750,28 @@ form .col-lg-12, form .col-lg-6,form .col-lg-3 {
 	background-size:30px;
 }
 
-
+	.nmPrenm{
+		display: inline;
+	}
 /* //////// ===== LISTE DEMANDEURS D'EMPLOI ===== //////// */
 
 /* === recherche === */
- .rech > .input[type=text] {
-    width: 130px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-}
-.rech > input[type=text]:focus {
-    width: 100%;
-}
-.rech > .input {
-	height: 50px!important;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: white;
-    background-image: url(../img/icons/magnifier.png);
-    background-position: left center;
-    background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
-    -webkit-transition: width .4s ease-in-out;
-    transition: width .4s ease-in-out;
+
+.rech {
+	margin-bottom: 40px;
+	display: inline-block;
 }
 
+.rech > input {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    height: 40px;
+}
+.rech .btn , .rech input{
+    font-size: 12px;
+    height: 40px;
+}
 /* ======== table  ============*/
 .screen{
 	overflow: hidden;

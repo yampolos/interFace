@@ -270,7 +270,21 @@ $('#enfants').click(function() {
         $(this).editable({
           url: '/post'
         });
+            //make username required
+        $('.edit').editable('option', 'validate', function(v) {
+            if(!v) return 'Required field!';
+        });
+         
+        //automatically show next editable
+        $('.edit').on('save.newuser', function(){
+            var that = this;
+            setTimeout(function() {
+                $(that).closest('tr').next().find('.edit').editable('show');
+            }, 200);
+        });
     });
+
+
 
      $('#natio').click(function() {
         $.fn.editable.defaults.mode = 'inline';
@@ -302,7 +316,7 @@ $('#enfants').click(function() {
 
      $('#addMemo').click(function() {
       //$('#lastRdv').clone().insertBefore($('#lastRdv'));
-      $('#lastRdv').append('<div class="panel panel-default" id="newRdv"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Rendez-vous 01</a></h4><p>Rendez-vous du : <span class="datememo">(date)</span>suivi par : <span>(nom référent FACE)</span></p></div><div id="collapse1" class="panel-collapse collapse in col-lg-12 blockresum"><div class="panel-body col-lg-8 resum"><h3 class="titleresum">Résumé</h3><p class="textresum"><a class="resume" data-type="textarea" data-pk="1">Votre texte ici ....</a></p></div><div class="col-lg-4 resum demarche"><h3 class="titleresum">Démarches à suivre</h3><p class="textresum"><a class="resume" data-type="textarea" data-pk="1">Votre texte ici ....</a></p></div></div><button id="cncl">Annuler</button><button id="vld">Valider</button>');
+      $('#lastRdv').prepend('<div class="panel panel-default" id="newRdv"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Rendez-vous</a></h4><p>Rendez-vous du : <span class="datememo">(date)</span>suivi par : <span>(nom référent FACE)</span></p></div><div id="collapse1" class="panel-collapse collapse in col-lg-12 blockresum"><div class="panel-body col-lg-8 resum"><h3 class="titleresum">Résumé</h3><p class="textresum"><a class="resume" data-type="textarea" data-pk="1">Votre texte ici ....</a></p></div><div class="col-lg-4 resum demarche"><h3 class="titleresum">Démarches à suivre</h3><p class="textresum"><a class="resume" data-type="textarea" data-pk="1">Votre texte ici ....</a></p></div></div><button id="cncl">Annuler</button><button id="vld">Valider</button>');
 
         $('#newRdv').ready(function() {
             $.fn.editable.defaults.mode = 'inline';
@@ -313,11 +327,14 @@ $('#enfants').click(function() {
         });
 
         $('#cncl').click(function() {
-          $('#newRdv').remove();
+          $('#newRdv:first-of-type').remove();
         });
 
     });
-     
+    
+
+
+   
 
      
 
@@ -333,3 +350,10 @@ $('#enfants').click(function() {
 
 
 });
+
+
+ /// editer la photo DE
+    $('#imgEdit').click(function() {
+          //$('#lastRdv').clone().insertBefore($('#lastRdv'));
+     $('#photoDE').replace('<label for="fileinput">Télécharger un document</label><input class="" type="file" id="fileinput">');
+    });

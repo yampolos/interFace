@@ -73,14 +73,39 @@
 
     	<h1 class="titrePage col-lg-12 col-md-12">demandeurs d'emploi</h1>
 
-    	<div class="rech col-lg-3">
-    		<h5 class="titlFiltrRech">Rechercher par :</h5>
-    		 <select class="class="form-control selectpicker" title="Action.." data-width="23.3%"">
-    		 	<option>Nom</option>
-                <option>Prénom</option>
-                <option>Id. Pôle Emploi</option>
-    		 </select>
-    	</div>
+    	<div class="input-group rech col-lg-6" >
+
+            <select class="form-control selectpicker" title="Rechercher par:" data-width="fit">
+                <option><a href="#">Nom</a></option>
+                <option><a href="#">Prénom</a></option>
+                <option><a href="#">ID Pole Emploi</a></option>
+            </select>
+
+            <input type="text" class="form-control" aria-label="...">
+        	<button class="btn btn-default" type="button" action="submit">
+        		<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        	</button>
+	      	
+        </div>
+
+    		 <div class="input-group">
+		      <div class="input-group-btn">
+		        <select type="button" class="selectpicker" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span> Rechercher par : <span class="caret"></span>
+		          <option><a href="#">Nom</a></option>
+		          <option><a href="#">Prénom</a></option>
+		          <option><a href="#">ID Pole Emploi</a></option>
+		        </select>
+		        
+		      </div>
+		      
+		    </div> 
+		
+
+    	
+
+    	
+
+    	
 
     	<table class="table col-lg-12" id="listDE ">
 		  <tr class="head">
